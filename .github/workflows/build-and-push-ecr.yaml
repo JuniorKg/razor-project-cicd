@@ -30,5 +30,4 @@ jobs:
         run:  docker tag razor_project:v1 691978575284.dkr.ecr.us-east-2.amazonaws.com/razor_project:v1
 
       - name: Push docker image to Amazon ECR
-        run: |
-          docker push 691978575284.dkr.ecr.us-east-2.amazonaws.com/razor_project:v1
+        run: docker push 691978575284.dkr.ecr.us-east-2.amazonaws.com/razor_project:v1
