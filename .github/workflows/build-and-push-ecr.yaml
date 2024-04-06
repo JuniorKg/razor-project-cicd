@@ -24,10 +24,11 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
 
       - name: Build docker image
-        run: docker build -t razor_project:latest .
+        run:  docker build -t razor_project .
 
       - name: Tag docker image
         run:  docker tag razor_project:latest 691978575284.dkr.ecr.us-east-2.amazonaws.com/razor_project:latest
 
       - name: Push docker image to Amazon ECR
-        run:  docker push 691978575284.dkr.ecr.us-east-2.amazonaws.com/razor_project:latest
+        run: |
+           docker push 691978575284.dkr.ecr.us-east-2.amazonaws.com/razor_project:latest
